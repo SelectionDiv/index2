@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 100px;
+            margin:0 auto;
+        }
+        img{
+
+            width: 500px;
+            display: block;
+            margin:0 auto;
+        }
+        .box div{
+            width: 20px;
+            height:20px;
+            border-radius:50%;
+            border: 1px solid #000;
+            float: left;
+           
+       }
+
+        .bg{
+            background: red;
+           
+        }
+
+    </style>
+</head>
+<body>
+<script>
+    window.onload = function () {
+        var img = document.getElementsByTagName("img")[0];
+        var box = document.getElementById("div");
+        var divs = box.children;
+        console.log();
+
+        var arr = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg"]
+        var n = 0;
+        var timer;
+
+/*
+        for(var i = 0;i<divs.length;i++){
+            divs[i].onmouseover = function () {
+                for(var i =0;i<divs.length;i++){
+                    divs[i].className = "";
+                }
+                this.className = "bg"
+            }
+        }
+*/
+        box[0].onmouseover = function () {
+            timer = setInterval(fn,1000)
+        }
+        box[0].onmouseout = function () {
+            timer = setInterval(fn,1000)
+        }
+
+
+        function fn() {
+            n++;
+            if(n>3){
+                n=0;
+            }
+            img.src = arr[n];
+            for(var i =0;i<divs.length;i++){
+                divs[i].className = "";
+            }
+            divs[n].className = "bg"
+        }
+
+    }
+</script>
+
+
+<img src="img/1.jpg" alt="">
+
+<div class="box" id="div">
+    <div class="bg"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//翻转数组，返回一个新数组
+
+
+    //思路：1，先声明一个新数组 2，最后一个和第一个换位置 ，换length次
+
+        //正向遍历，反向添加
+
+    //索引值（下标）、从0开始
+//    function reverse(a){
+//        var arr = [];
+//        for(var i =0;i<a.length;i++){
+//            //如果不 （-i）,就是每次把数组最后一项赋值给
+//            arr[i] = a[a.length-1-i]
+//        }
+//        return arr;
+//    }
+//
+//    var arr = [1,2,3,4,5,6,7]
+//    console.log(reverse(arr));
+//反向遍历，正向添加
+
+//
+//    function reverse(a){
+//        var arr = [];
+//        for(var i = a.length-1;i>=0;i--){
+//            arr[arr.length] = a[i]
+//        }
+//        return arr
+//    }
+
+
+//第三种方法 ，交换位置  不用声明一个空数组var arr = [];
+//     function reverse(a){
+//            for(var i =0;i<a.length/2;i++){
+//                var temp = a[a.length-1-i]
+//                a[a.length-1-i] = a[i];
+//                a[i] = temp;
+//            }
+//          return a
+//
+//        }
+//
+//        var arr = [1,2,3,4,5,336,7];
+//
+//        var c = reverse(arr)
+//
+//        console.log(c);
+
+
+
+    //6、求阶乘
+    //7、求1!+2!+3!+....+n!
+
+    //5! 5*4*3*2*1
+//    function jc(a) {
+//        var product = 1;
+//        for(var i =1;i<=a;i++){
+//            product *= i;
+//        }
+//        return product
+//    }
+//console.log(jc(5));
+//console.log(jc(6));
+//console.log(jc(2));
+//console.log(jc(1));
+
+    //函数调用
+
+//    function jcSum(a) {
+//        var sum = 0;
+//        for(var i =1;i<=a;i++){
+//            sum += jc(i);
+//        }
+//        return sum;
+//    }
+////
+//    console.log(jcSum(5))
+//    console.log(jcSum(6))
+//    console.log(jcSum(3))
+//    console.log(jcSum(2))
+
+
+
+</script>
+</body>
+</html>

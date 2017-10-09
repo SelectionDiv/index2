@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var arr = [7,32,1,2,3,4,5];
+    var n = 0;
+    var m = 0;
+
+
+    for(var i = 0;i<arr.length-1;i++){
+        n++
+       var flag = true;
+        for(var j = 0;j<arr.length-1-i;j++){
+            m++
+            if(arr[j]>arr[j+1]){
+                var temp = arr[j+1];
+                arr[j+1] =arr[j];
+                arr[j] = temp
+               flag = false;*
+            }
+        }
+        console.log(arr)
+      if(flag == true){
+          break;
+      }
+
+    }
+   
+    console.log(m + "次");
+    console.log(n + "轮");
+
+ var flag = true;
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

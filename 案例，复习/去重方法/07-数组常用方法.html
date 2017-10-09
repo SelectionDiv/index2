@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var arr = [1,2,3,4,5]
+//    var str = "1,2,3,4"
+    //判断数组。
+    // 判断A是否是B类型。 instanceof()
+//    instanceof
+//    console.log(arr instanceof Array);
+//    console.log(arr instanceof Object);
+//    console.log(typeof arr);
+//    console.log(arr instanceof Function)
+    // HTML5中新增    判断是不是数组
+
+/*
+    console.log(Array.isArray(arr));
+    console.log(Array.isArray(str));
+
+*/
+
+//    console.log(arr.toString());//
+//    console.log(arr.valueOf());//
+
+    //不写默认用逗号分隔，无缝连接用空字符串
+    // (join): 字符串  =  数组.join(变量);
+//
+//    var arr = [1,2,3,4,5]
+//    console.log(arr.join(""));
+//    console.log(arr.join());
+//    console.log(arr.join(" "));
+//    console.log(arr.join("|"));
+//
+//    console.log(typeof arr.join());//typeof() 查看数据类型
+
+    //数组增删和换位置（原数组讲被修改）
+
+//    var arr = [1,3333,222222,6,5]
+    //push 最后面插入, unshift 最前面插入
+
+/*    arr.push(3333)
+    console.log(arr);
+    arr.unshift(7);
+    console.log(arr);*/
+//    console.log(arr.pop());//被删除的元素
+//    console.log(arr);
+//    console.log(arr.shift())//取出数组中的第一个元素
+//    console.log(arr)
+
+//        arr.reverse()//翻转数组
+//        console.log(arr);
+//        arr.sort();//排序//按照第一个数排序
+//        console.log(arr);
+
+    //(了解)如果计算后（a-b），返回值为负数，a排b前面。等于0不动。返回值为正数，a排b后面。
+//        var arr = [1,2,3,4,5,6]
+//           arr.sort((function(a,b){
+//               return a-b;
+//           }))
+//            console.log(arr);
+
+    arr1 = [4,5,6,7,8,9,10,11]
+//    arr2 = [4,5,6]
+    //arr1.concat(arr2);//拼接，合并数组
+    //slice() //从当前数组中截取一个新的数组，不影响原来的数组，
+    //新数组 = 数组1.slice(索引1，索引2);,strat开始，参数2取不到
+/*
+        console.log(arr1);
+        console.log(arr1.slice(0,3));
+        console.log(arr1.slice(0));
+        console.log(arr1.slice(3,4));
+*/
+//    console.log(arr1.slice(3,10));
+
+//splice()//删除或替换当前数组的某些项目，参数start,deleteCount,options(要替换的项目)
+//新数组 = 数组1.splice(起始索引，结束索引，替换内容);
+//splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。
+//注释：该方法会改变原始数组。
+//第一个参数 必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。
+//第二个参数	必需。规定应该删除多少元素。必须是数字，但可以是 "0"。如果未规定此参数，则删除从 index 开始到原数组结尾的所有元素。
+//	可选。要添加到数组的新元素
+//    var arr2 = [2,3,4]
+//    var arr1 = [["can",2,2],[2,3,4],[2,2,3]]
+//    console.log(arr1[i][j]);
+    //只有一个参数的时候
+    //
+
+
+//    arr1.splice(5,2,2,2,2,2);
+//    console.log(arr1);
+//    console.log(arr);
+//    console.log(arr1);
+//   var arr =arr1.splice(2)
+//    console.log(arr);
+///*    console.log(arr1.slice(2));
+//    console.log(arr1);
+//    console.log(arr1.splice(5,2));
+//    console.log(arr1);
+
+
+//    console.log(arr1.splice(1));
+
+//索引值 = 数组.indexOf/lastIndexOf(数组中的元素);
+
+
+//    var arr = ["薛之谦","华晨宇","胡歌","霍建华","张艺兴","权志龙","宋仲基",
+//        "陈奕迅","张国荣","梅艳芳","谭咏麟","张学友","tfboys","靳东","梅艳芳"]
+////        console.log(arr.length);
+//        console.log(arr.indexOf("陈奕迅"));
+//        console.log(arr.indexOf("刘三姐"));
+
+//        console.log(arr.lastIndexOf("梅艳芳"));
+    //数组去重
+    var arr = [1,2,3,1,2,2,2];
+    //思路
+    //var arr1=[1,2,3]// ;
+
+
+
+
+</script>
+</body>
+</html>

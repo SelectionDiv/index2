@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    	.main{width:500px;
+    		margin: 0px auto;
+    		position: relative;  		
+    	}
+        .box{
+            width: 100px;
+            margin:0 auto;
+            bottom:0px;
+            left:200px;
+            position: absolute; 
+        }
+        img{
+            width: 500px;
+            display: block;
+            margin:0 auto;
+        }
+        .box div{
+            width: 20px;
+            height:20px;
+            border-radius:50%;
+            border: 1px solid #000;
+            float: left;       
+        }
+        .bg{
+            background:rgb(255,0,128);
+        }
+        .left{
+        	width:50px;
+        	height:100px;
+        	background: rgba(192,192,192,0.7);
+        	float:left;
+        	top:100px;
+        	left:0px;
+        	position: absolute;
+        }
+     /*   .left_1{
+        	background: orange;
+        	width:30px;
+        	height:30px;
+        }*/
+	    .right{
+	    	width:50px;
+	   		height:100px;	    	
+	    	background: rgba(192,192,192,0.7);
+	    	float:right;
+	    	top:100px;
+        	right:0px;
+        	position: absolute;
+	    }
+    </style>
+</head>
+<body>
+<script>
+ 	window.onload = function(){
+ 		var img =document.getElementsByTagName("img")[0]
+ 		var box =document.getElementById("div")
+ 		var divs =box.children;
+ 		var times;
+ 		var left =document.getElementsByTagName("left")
+ 		var right =document.getElementsByTagName("right")
+ 		var n =0;
+ 		//var index =0;
+ 		// console.log(divs)
+ 		var arr =["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg"]
+ 		//排他思想
+ 		for( var i =0;i<divs.length;i++){
+ 			divs[i].index=i
+ 			divs[i].onmouseover=function(){
+ 				for(var j= 0;j<divs.length;j++){
+ 					divs[j].className ="";
+ 				}
+ 				img[i].src = arr[this.index]
+ 				this.className="bg"
+ 			}
+ 		}
+ 		//鼠标经过清除定时器
+ 		box.onmouseover= function(){
+ 			clearInterval(times)
+ 		}
+ 		//鼠标移出时启动定时器
+ 		box.onmouseout= function() {
+ 			times =setInterval(fn,1500)
+ 		}
+
+ 		// function getIndex(){
+ 		// 	for(var i=0;i<divs.length;i++){
+ 		// 		console.log(divs[i].className)
+ 		// 		if(divs.className=="bg"){
+ 		// 			index=i
+ 		// 		}
+ 		// 	}
+ 		// 	return index;
+ 		// }
+ 		left.onclick =function(){
+ 			 if(n>3){
+                n=0;
+            }
+            console.log(arr[n])
+            img.src = arr[n];
+            for(var i =0;i<divs.length;i++){
+                divs[i].className = "";
+            }
+            divs[n].className = "bg"
+              n++;	
+ 		}
+ 		right.onclick=function(){
+ 			if(n<0){
+ 				n=3;
+ 			}
+ 			//切换图片
+ 			img.src =arr[n]
+ 			//清除所有圆点背景色（排他思想）
+ 			for(var i =0;i<divs.length;i++){
+ 				div[i].className="";
+ 			}
+ 			divs[n].className="bg"
+ 			n++
+ 		}
+ 	
+ 		function fn(){
+            if(n>3){
+                n=0;
+            }
+            console.log(arr[n])
+            img.src = arr[n];
+            for(var i =0;i<divs.length;i++){
+                divs[i].className = "";
+            }
+            divs[n].className = "bg"
+              n++;
+        }
+
+ 	}
+</script>
+	<div class="main">
+		<img src="img/1.jpg" alt="">
+		<div class="left">
+			<!-- <div class="left_1"></div> -->
+		</div>
+		<div class="right">
+			<!-- <div class="right_1"></div> -->
+		</div>
+		<div class="box" id="div">
+		    <div class="bg"></div>
+		    <div></div>
+		    <div></div>
+		    <div></div>
+		</div>
+	</div>
+</body>
+</html>

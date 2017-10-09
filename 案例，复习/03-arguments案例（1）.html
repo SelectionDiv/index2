@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+
+<script>
+
+/*
+
+fn1( 1,2,3,4,5,6 );					// 实参——实际传递的参数
+function fn1( a,b,c ){		// 形参——形式上，abc这些名代表123
+//function fn1(){
+	// arguments => [ 1,2,3 ] —— 实参的集合
+	 alert( arguments );
+    console.log(arguments);
+    alert( arguments.length );//6
+	 alert( arguments[arguments.length-1] );//6
+	 alert( arguments[arguments.length-2] );//5
+	 alert( arguments[arguments.length-3] );//4
+}
+
+*/
+
+//
+//var a = 1;
+//function fn2(a){
+////    arguments[0] = 3;
+//    alert(a);//
+//    var a = 2;
+////    alert( arguments[0] );
+//}
+//fn2(a);
+//alert(b);
+
+
+
+
+
+
+
+
+
+
+// 课后练习：
+ alert( fn1( 7 ) );			// [ 1,2,3,4,5,6,7 ]
+/*
+ function fn1(a) {
+     var arr = []
+     for(var i=1;i<=a;i++){
+         //arr.push(i)
+         //arr[arr.length] = i;
+     }
+     return arr;
+ }
+
+*/
+/*
+
+function fn1() {
+    var arr = []
+    for(var i=1;i<=arguments[0];i++){
+        arr.push(i)
+        //arr[arr.length] = i;
+    }
+    return arr;
+}
+
+*/
+
+
+// alert( fn2(2, 5) );			// [ 2,3,4,5 ]
+// 当函数的参数个数无法确定的时候：用 arguments
+/*
+ function fn2(){
+     var arr = [];
+     for(var i= arguments[0];i<=arguments[arguments.length-1];i++){
+         arr.push(i);
+     }
+     return arr;
+ }
+
+
+
+
+
+alert( fn2(2, 5) );			// [ 2,3,4,5 ]
+*/
+
+
+// 当函数的参数个数无法确定的时候：用 arguments
+ //alert( sum( 1,2,3,10 ) );				// 16
+// alert( sum( 1,2,3,4 ) );			// 10
+
+/*
+function sum() {
+    var sum = 0;
+    for(var i = 0;i<arguments.length;i++){
+        sum += arguments[i]
+    }
+    return sum;
+
+}
+*/
+
+
+
+// 课后练习：
+// alert( sum( 1,2,3 , '+' ) );					// 6
+// alert( sum( 10,2,3,4, '-' ) );			// 1
+
+//    function add() {
+
+//        var sum = arguments[0]
+//        for(var i=0;i<arguments.length-2;i++){
+//            if(arguments[arguments.length-1] == "+"){
+//                sum += arguments[i]
+//            }
+//           if (arguments[arguments.length-1] == "-"){
+//                sum -= arguments[i+1]
+//            }
+//
+//        }
+//
+//
+//        return sum;
+//    }
+
+
+//console.log(add(-2,3,"-"));
+
+
+</script>
+
+</head>
+
+<body>
+</body>
+</html>

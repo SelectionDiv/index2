@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+//普通方式创建对象
+//缺点：如果要定义多个对象的话，需要不断的重复创建
+		var obj = {
+			name: '张三',
+			age: "20",
+			say: function(){
+				return (`我叫${this.name}今年${this.age}岁`)
+			}
+		}
+		console.log(obj.say())
+
+//工厂模式
+//优点：解决了重复实例化的问题，缺点：但存在对象识别问题(无法判断对象的object类型)
+		function creatObj(name,age){
+			var obj = new Object();
+			obj.name = name,
+			obj.age = age,
+			obj.say =function(){
+				return (`我叫${this.name}今年${this.age}岁`)
+			}
+			return obj;
+		}
+
+		var preson1 = creatObj("王二","22")
+		var preson2 = creatObj("麻子","20")
+		console.log(preson1.say())
+		console.log(preson2.say())					
+		console.log(preson1 instanceof creatObj)		//false
+		console.log(preson1 instanceof Object)			//ture
+
+
+//构造函数模式
+//优点：解决了重复实例化问题和对象识别问题
+		function Box(name,age){
+			this.name = name;
+			this.age = age;
+			this.say = function(){
+				return (`我叫${this.name}今年${this.age}岁`)
+			}
+		}
+		var someone1 = new Box("李四","23");
+		var someone2 = new Box("狗蛋","13");
+		console.log(someone1.say())
+		console.log(someone2.say())					
+		console.log(someone1 instanceof Box)		//ture
+		console.log(someone1 instanceof Object)		//ture
+		console.log(Box instanceof Object)			//ture
+
+	</script>
+</body>
+</html>

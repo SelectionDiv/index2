@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//
+		// function tuzi(month){
+		// 	if(month<3){
+		// 		numtu = 1;
+		// 		//alert()	
+		// 	}else if(month >= 3){	
+		// 		numtu = arguments.callee(month-1) + arguments.callee(month-2);
+		// 	}
+		// 	return numtu;
+		// }	
+		//console.log(tuzi(7))
+	
+			
+		function nian(year,month,day){
+			// var year = parseInt(str.slice(0,4));
+			// var month = parseInt(str.slice(4,6));
+			// var day = parseInt(str.slice(6,8));
+			var days = 0;
+			prompt("请输入")
+			console.log(year+"----"+month+"---"+day)
+			function runnian(year){
+				if(year%4 == 0){
+					if(year%100 ==0){
+						if(year%400 ==0){
+							return true;
+						}
+						return false
+					}
+					return true;
+				}
+				return false;
+			}
+			//console.log(runnian(2000))
+			var months = [31,28,31,30,31,30,31,31,30,31,30,31]
+			for(var i =0;i<month-1;i++){
+				days += months[i]; 
+				console.log(days)
+			}
+			if(month>3 && runnian(year)){
+				days = days+day+1;
+			}else days = days+day;
+			return year+"-"+month+"-"+day+"是当年的第"+days+"天";
+			
+		}
+		//console.log(month(3))
+		console.log(nian(2000,5,5))
+		//var atr =prompt("sjdfkjskl")
+		/*var string = "2010-10-23"
+		console.log(typeof string)
+		function isdata(str){
+			var reg = /^[^0]\d{3}-[0]?\d{1}-[0123]\d{1}$/;
+			if(reg.test(str)){
+				alert('true')
+			}
+		}
+		isdata(atr)*/
+	</script>
+</body>
+</html>

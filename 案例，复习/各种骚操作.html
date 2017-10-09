@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var arr = [23,356,25,1,45]
+	console.log(arr.join(",").split(","))
+	console.log(typeof Math.max("23","63","65",12))
+//返回一个数组中的最大值和最小值
+		function maxmin(arr){
+			return{
+				max: Math.max.apply(null,arr.join(",").split(",")),
+				min: Math.min.apply(null,arr.join(",").split(","))
+			}
+		}
+		console.log( maxmin(arr).min)
+
+//json 转字符串 ，ajax，get后的数据
+		function jsontostr(json){
+			var arr = [];
+			for(var key in json){
+				arr.push(key+"="+json[key])
+			}
+			console.log(arr.join("&"))
+		}
+		var json={
+			"name": "yang",
+			"psw": "123645" 
+		}
+		jsontostr(json)
+//打乱数组		
+		function luanarr(arr){
+			arr.sort(function(){
+				return Math.random()-0.5
+			}) 
+			return arr
+			//console.log(arr)
+		}
+//获取指定长度的随机字符串
+		function getRandomStr(len) {
+		    var str = "";
+		    for( ; str.length < len; str  += Math.random().toString(36).substr(2));
+		    return  str.substr(0, len);
+		}
+		console.log(getRandomStr(52))
+//返回数组任意项	
+		function renyi(arr){
+			return arr[Math.floor(Math.random()*arr.length)]
+		}
+
+//去除首尾空格
+		function trim(str){
+			return str.replace(/(^\s*)|(\s*$)/g,"")
+		}
+		function trimall(str){
+			return str.replace(/\s*/g,"")
+		}
+		var str = "   sdf  sdf   "
+		console.log(trimall(str))
+		console.log(arr.length)
+	</script>
+</body>
+</html>

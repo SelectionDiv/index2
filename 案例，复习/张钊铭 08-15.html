@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+/*		*{margin: 0px;padding:0px;}
+		ul{height: 50px;
+			list-style:none;
+		}
+		.box{
+			width:300px;
+			height: 200px;
+		}
+		li{
+			width: 300px;
+			height:50px;
+			float: left;
+			text-align: center;
+			line-height: 50px;
+			background: red;
+		}
+		.box1{
+			float: left;
+			width:300px;
+			height:200px;
+			background: #666;
+		}*/
+		*{margin:0;padding:0;}
+		ul{list-style:none;}
+		.box {
+			width:820px;
+			height: 300px;
+			margin: 20px auto;
+			overflow: hidden;
+		}
+		.mt span {
+			display: inline-block;
+			width: 200px;
+			height: 30px;
+			background-color: pink;
+			text-align: center;
+			line-height: 30px;
+			cursor: pointer;
+		}
+		.mt span.cur {
+			background-color: purple;
+		}
+		.mb li {
+			width: 100%;
+			height: 270px;
+			background-color: purple;
+			display: none;
+		}
+		.mb li.show {
+			display: block;
+		}
+
+	</style>
+	<script>
+		window.onload = function(){
+			function fn(a){
+				var div1 =document.getElementById(a)
+				var lis =div1.children[1].getElementsByTagName("li");
+				// var lis =ul.children;
+				var spans =div1.children[0].getElementsByTagName("span")
+					//alert();
+				for(var i=0;i<lis.length;i++){				
+					spans[i].n = i;
+					// this.style.backgroundColor="red"				
+					spans[i].onmouseover =function(){
+						for( var j=0;j<lis.length;j++){
+							lis[j].className ="";
+							spans[j].className ="";
+						}
+						this.className ="cur"
+						lis[this.n].className ="show"
+					}
+				}
+			}
+			fn("div1")
+			fn("div2")
+			fn("div3")
+		}
+			
+	</script>
+</head>
+<body>
+<div class="box" id="div1">
+	<div class="mt">
+		<span class="cur">新闻</span>
+		<span>体育</span>
+		<span>娱乐</span>
+		<span>八卦</span>
+	</div>
+	<div class="mb">
+		<ul>
+			<li class="show">一二三四</li>
+			<li>二三四五</li>
+			<li>三四五六</li>
+			<li>四五六七</li>
+		</ul>
+	</div>
+</div>
+<div class="box" id="div2">
+	<div class="mt">
+		<span class="cur">新闻</span>
+		<span>体育</span>
+		<span>娱乐</span>
+		<span>八卦</span>
+	</div>
+	<div class="mb">
+		<ul>
+			<li class="show">一二三四</li>
+			<li>二三四五</li>
+			<li>三四五六</li>
+			<li>四五六七</li>
+		</ul>
+	</div>
+</div>
+<div class="box" id="div3">
+	<div class="mt">
+		<span class="cur">新闻</span>
+		<span>体育</span>
+		<span>娱乐</span>
+		<span>八卦</span>
+	</div>
+	<div class="mb">
+		<ul>
+			<li class="show">一二三四</li>
+			<li>二三四五</li>
+			<li>三四五六</li>
+			<li>四五六七</li>
+		</ul>
+	</div>
+</div>
+	
+</body>
+</html>

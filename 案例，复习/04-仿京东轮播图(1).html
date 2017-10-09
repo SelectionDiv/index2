@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 50px;
+            margin:0 auto;
+
+        }
+        img{
+
+            width: 500px;
+            display: block;
+            margin:0 auto;
+        }
+        .box div{
+            width: 20px;
+            height:20px;
+            border-radius:50%;
+            border: 1px solid #000;
+            float: left;
+        }
+
+        .bg{
+            background: red;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+<script>
+    window.onload = function () {
+        var img = document.getElementsByTagName("img")[0];
+        var box = document.getElementById("div");
+        var divs = box.children;
+        var btns = document.getElementsByTagName("button");
+
+        var arr = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg"]
+        var n = 0;
+        var timer;
+
+/*
+        for(var i = 0;i<divs.length;i++){
+            divs[i].onmouseover = function () {
+                for(var i =0;i<divs.length;i++){
+                    divs[i].className = "";
+                }
+                this.className = "bg"
+            }
+        }
+*/
+
+
+
+        box.onmouseover = cT;
+
+        box.onmouseout = addT;
+
+
+        function cT() {
+            clearInterval(timer)
+        }
+
+        function addT() {
+            timer = setInterval(fn,500)
+        }
+
+        function fn() {
+            n++;
+            if(n>3){
+                n=0;
+            }
+            img.src = arr[n];
+            for(var i =0;i<divs.length;i++){
+                divs[i].className = "";
+            }
+            divs[n].className = "bg"
+        }
+
+
+        btns[0].onmouseover = cT;
+        btns[1].onmouseover = cT;
+        btns[0].onmouseout = addT;
+        btns[1].onmouseout = addT;
+
+        btns[0].onclick = function (){
+            lr(false)
+        }
+        btns[1].onclick = function () {
+           lr(true)
+        }
+/*
+        //封装的左右按钮
+        function lr(a){
+            if(a){
+                n++;
+                if(n>3){
+                    n=0;
+                }
+            }else{
+                n--;
+                if(n<0){
+                    n=3;
+                }
+            }
+            img.src = arr[n];
+            for(var i =0;i<divs.length;i++){
+                divs[i].className = "";
+            }
+            divs[n].className = "bg"
+        }
+*/
+
+
+
+    }
+</script>
+
+
+<img src="img/1.jpg" alt="">
+
+<div class="box" id="div">
+    <div class="bg"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<button><<<</button>
+<button>>>></button>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload = function () {
+            var sel = document.getElementsByTagName("select")//获取到的是一个数组
+            var body = document.body;
+            console.log(body);
+			//onchange 事件 内容改变时发生。
+            sel[0].onchange = function () {
+                // console.log(typeof this.value);
+//                console.log(typeof this.value);
+                //()里判断的是===，数据类型也判断
+                switch (Number(this.value)){
+                    case 2:
+                        body.style.backgroundColor = "red"
+                        break;
+                    case 3:
+                        body.style.backgroundColor = "blue"
+                        break;
+                    case 4:
+                        body.style.backgroundColor = "gray"
+                        break;
+                    default:
+                        body.style.backgroundColor = "green"
+                        break;
+                }
+            }
+        }
+	</script>
+</head>
+<body>
+	<select>
+		<option value="1">春</option>
+		<option value="2">夏</option>
+		<option value="3">秋</option>
+		<option value="4">冬</option>
+	</select>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<button>年龄</button>
+<button>年龄</button>
+<button>成绩</button>
+
+<div><h1>a</h1><h2>12</h2><h3>50</h3></div>
+<div><h1>b</h1><h2>222</h2><h3>15</h3></div>
+<div><h1>c</h1><h2>53</h2><h3>52</h3></div>
+<div><h1>d</h1><h2>11</h2><h3>44</h3></div>
+<div><h1>e</h1><h2>122</h2><h3>111</h3></div>
+
+<script>
+ var btnArr = document.getElementsByTagName("button");
+ var h2Arr = document.getElementsByTagName("h2");
+ var h3Arr = document.getElementsByTagName("h3");
+
+// console.log(h3[0].innerHTML);
+
+
+ btnArr[1].onclick = function (){
+    for(var i = 0;i<h2Arr.length-1;i++){
+         var flag = true;
+         for(var j = 0;j<h2Arr.length-1-i;j++){
+             if(Number(h2Arr[j].innerHTML)>Number(h2Arr[j+1].innerHTML)){
+                 var temp = h2Arr[j+1].parentNode.innerHTML;
+                 h2Arr[j+1].parentNode.innerHTML =h2Arr[j].parentNode.innerHTML;
+                 h2Arr[j].parentNode.innerHTML= temp;
+                 flag = false;
+             }
+         }
+         if(flag == true){
+             break;
+         }
+     }
+ }
+ btnArr[2].onclick = function (){
+   for(var i = 0;i<h3Arr.length-1;i++){
+         var flag = true;
+         for(var j = 0;j<h3Arr.length-1-i;j++){
+             if(Number(h3Arr[j].innerHTML)>Number(h3Arr[j+1].innerHTML)){
+                 var temp = h3Arr[j+1].parentNode.innerHTML;
+                 h3Arr[j+1].parentNode.innerHTML =h3Arr[j].parentNode.innerHTML;
+                 h3Arr[j].parentNode.innerHTML= temp;
+                 flag = false;
+             }
+         }
+         console.log(arr)
+         if(flag == true){
+             break;
+         }
+     }
+ }
+
+</script>
+</body>
+</html>

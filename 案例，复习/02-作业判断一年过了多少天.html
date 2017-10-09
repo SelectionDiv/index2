@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //需求获取今年过了多少天
+    //思路：
+    //1,和年只和闰年平年有关系， 就是差一天
+    //2,8月14过了多少天 ，前七个月的天数加起来， 然后再加上14;  1月1    3月1， //前两个月的天数，在加日数;
+
+
+
+
+
+/*    var sumDay = 0;
+
+    for(var i =0;i<arrMouth.length;i++){
+        sumDay +=arrMouth[i];
+    }
+    console.log(sumDay);*/
+
+    //如果是闰年的话，到了三月（过了二月）总天数才加+;
+
+
+    function sumDay (year,mouth,day) {
+        //创建一个数组保存每个月的天数
+        var arrMouth = [31,28,31,30,31,30,31,31,30,31,30,31];
+                //每个月天数的累加，再加上传进来这个Day
+        //2,8月14过了多少天 ，前七个月的天数加起来， 然后再加上14;  1月1    3月1， //前两个月的天数，在加上多少日;
+                for(var i =0;i<mouth-1;i++){
+                    day += arrMouth[i];
+                }
+
+        //如果是闰年的话，到了三月（过了二月）总天数才加+，所以1月2月的时候不用加1;
+        //两个条件必须同时满足 。 &&
+               if(isRun(year)&&mouth>2){
+                   day++
+                }
+
+        return day
+    }
+
+    console.log(sumDay(2016,1,31));
+    console.log(sumDay(2016,2,29));
+    console.log(sumDay(2016,3,1));
+
+
+
+
+    function isRun(a) {
+
+        if (( a%4==0 && a%100!=0)|| a%400==0 ){
+            return true
+
+        }
+        return false
+    }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百分制转换</title>
+</head>
+<body>
+<script>
+//	var a = Number(prompt("请输入数字"));
+//	console.log (typeof(a));
+//	var i =""
+//	if(0<i&&i<=60){
+//		alert("差")
+//	}else if(60<i&&i<=70){
+//		alert("可")
+//	}else if(70<i&&i<=80){
+//		alert("中")
+//	}else if(80<i&&i<=90){
+//		alert("良")
+//	}else if(i<=100){
+//		alert("优")
+//	}
+static void bubble_sort(int[] unsorted)
+        {
+            for (int i = 0; i < unsorted.Length; i++)
+            {
+                for (int j = i; j < unsorted.Length; j++)
+                {
+                    if (unsorted[i] > unsorted[j])
+                    {
+                        int temp = unsorted[i];
+                        unsorted[i] = unsorted[j];
+                        unsorted[j] = temp;
+                    }
+                }
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            int[] x = { 6, 2, 4, 1, 5, 9 };
+            bubble_sort(x);
+            foreach (var item in x)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+        }
+
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<script>
+	var days = 0;
+	// var  prompt("请输入")
+	function nian(year,month,day){
+		function runnian(year){
+			if(year%4 ==0){
+				(year%100 ==0)
+					(year%400 ==0)
+						return true;
+					}
+					return false;
+				
+				return true;
+			
+		 return false;
+		}
+		
+		// console.log(runnian(2008))
+
+		var months =[31,28,31,30,31,30,31,31,30,31,30,31];
+		for( var i =0; i<months-1;i++){
+			days += months[i];
+			console.log(days)
+		}
+		if(a=month>3 && runnian(year)){
+				days += day+1;
+			}
+			else days += day;
+			return year+"."+month+"."+day+"是今年第"+days+"天";
+	}
+	console.log(nian(2008,12,4))
+
+
+</script>
+	
+</body>
+</html>

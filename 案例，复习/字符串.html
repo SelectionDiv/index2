@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<script>
+	var str = "How,are,you,doing";
+	// console.log(typeof(str))
+	var arr = str.split(",");
+	// console.log(arr)
+	var str1 =[]
+	//function fun(){
+		for(var i =0;i<arr.length;i++){
+			//console.log(arr[i].slice(0,1).toUpperCase()+arr[i].slice(1));
+			console.log(arr[i].charAt(0).toUpperCase()+arr[i].slice(1));
+			//str1 = arr.join(',')
+			str1 = arr[i].charAt(0).toUpperCase()+arr[i].slice(1)
+			str = arr.join(',')
+			
+		}
+		//return arr
+	//}
+ //console.log(fun(str))
+		console.log(str)
+		//console.log(str1)
+
+</script>
+	
+</body>
+</html>

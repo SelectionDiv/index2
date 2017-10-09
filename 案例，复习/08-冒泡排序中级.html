@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>冒泡排序中级</title>
+</head>
+<body>
+	<script>
+		//    var arr = [6,5,4,3,2,1,0];
+	var arr = [3,2,1]
+    //定义两个值，一个监控轮数，一个监控次数
+    var m = 0;
+    var n = 0;
+    //1.一个控制轮数，元素个数-1轮，一个控制次数，元素个数-1次。
+    for(var i=0;i<arr.length-1;i++){
+        m++;
+        //因为每轮比较之后都能获得一个最符合标准的，所以每轮比较之后都少比较一次。
+        for(var j=0;j<arr.length-1-i;j++){
+            n++;
+            //2.作比较，相邻的两个元素比较，谁大谁在后面。
+            if(arr[j] > arr[j+1]){
+                var temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+    console.log(arr);
+    console.log(m);
+    console.log(n);
+
+
+
+	</script>
+</body>
+</html>
