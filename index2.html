@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		html,
+		body{
+			height:100%;
+			position: relative;
+			margin:0;		
+			box-sizing:border-box;
+		}
+		body{
+			padding-top:50px;
+			padding-bottom: 50px;
+		}
+		a{
+			text-decoration: none
+		}
+		header{
+			width: 100%;
+			height:45px;
+			position: fixed;
+			top:0px;
+			background: #00b38a;
+			text-align: center;
+			color:white;
+			line-height: 45px;
+			font-size:18px;
+		}
+		footer{
+			width: 100%;
+			height:45px;
+			position: fixed;
+			bottom:0;
+			background: #00b38a;
+		}
+		section{
+			width: 100%;
+			height: 100%;
+			overflow: auto
+		}
+		.login{
+			width: 100%;
+			height: 40px
+		}
+		.login p{
+			float: left;
+			margin:0 0 0 15px;
+			font-size: 14px;
+			color: #666;
+			line-height: 40px
+		}
+		.rightLogin{
+			float:right;
+			background: #f5f5f5;
+			border-radius:18px;
+			margin:5px 15px 5px 0;
+		}
+		.rightLogin a{
+			color:#00b38a;
+			padding:5px 18px;
+			display: block;
+		}
+		ul{
+			padding:0;
+			margin:0;
+		}
+		li{
+			height: 100px;
+			
+			list-style: none;
+			border-top:1px solid #ccc;
+			position: relative;
+
+		}
+		li div{
+			margin:10px;
+			height: 100%;
+		}
+		li img{
+			width: 60px;
+			position: absolute;
+			top:20px;
+			left:15px;
+		}
+		li h4{
+			width: 60%;
+			font-size: 17px;
+			font-weight:700;
+			position: absolute;
+			top:15px;
+			left:85px;
+			margin:0;
+			padding:4px 0px;
+			white-space:nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		li p{
+			position: absolute;
+			top:60px;
+			left:85px;
+			margin:0;
+			font-size:14px;
+			color:gray;
+			padding:8px 0px;
+			font-size:12px;
+		}
+		li span{
+			position: absolute;
+		}
+		.one{
+			top:38px;
+			left:85px;
+			font-size:14px;
+			padding:6px 0px;
+			white-space:nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.two{
+			right:10px;
+			top:40%;
+			color:#00b38a;
+		}
+		.loading{
+			background: #fafafa;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+		}
+		.copyright{
+			margin-top: 30px;
+			text-align: center;
+			font-size: 12px
+		}
+		.copyright p{
+			margin:0;
+		}
+		.copyright div{
+			margin-top: 10px
+		}
+		.footerDiv{
+			width: 100%;
+			height: 100%;
+			
+		}
+		.footerDiv div{
+			width: 33.3%;
+			height: 100%;
+			text-align: center;
+			line-height: 45px;
+			float: left;
+			background: #f6f6f6;			
+		}
+		.footerDiv div a{
+			color: #c2cfcc
+		}
+		.zhiwei{
+			background: #e7f3f0 !important;
+		}
+		.zhiwei a{
+			 color:#00b38a !important;
+		}
+		.zhiwei span:nth-child(1){
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			background: url(icon2.png) -32px -19.5px no-repeat;
+			background-size:250px 250px;
+			margin-bottom:-3px;
+		}
+		.sousu span:nth-child(1){
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			background: url(icon2.png) -14px -2.5px no-repeat;
+			background-size:250px 250px;
+			margin-bottom:-3px;
+		}
+		.wode span:nth-child(1){
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			background: url(icon2.png) -52.5px -2px no-repeat;
+			background-size:250px 250px;
+			margin-bottom:-3px;
+		}
+
+
+	</style>
+</head>
+<body>
+<header>拉勾网</header>
+<div class="login">
+	<div class="left">
+		<p>10秒钟定制职位</p>
+	</div>
+	<div class="rightLogin">
+		<a href="javascript:;">去登录</a>
+	</div>
+</div>
+<section>
+	<ul>
+		<li>		
+			<img src="https://static.lagou.com/i/image/M00/32/11/CgpFT1k-UIeAc_jgAAAJ1wOyLCk616.png" alt="">	
+			<h4>e橙优品</h4>
+			<span class="one">技术支持[深圳]</span>
+			<p>今天 15:50</p>
+			<span class="two">3k-5k</span>	
+		</li>
+		<li>		
+			<img src="https://static.lagou.com/i/image/M00/32/11/CgpFT1k-UIeAc_jgAAAJ1wOyLCk616.png" alt="">
+			<h4>e橙优品</h4>
+			<span class="one">外贸业务[深圳]</span>
+			<p>今天 15:50</p>
+			<span class="two">6k-10k</span>		
+		</li>
+		<li>
+			<img src="https://static.lagou.com/i/image/M00/32/11/CgpFT1k-UIeAc_jgAAAJ1wOyLCk616.png" alt="">	
+			<h4>北京博特互动营销咨询有限公司</h4>
+			<span class="one">客户经理AM[北京]</span>
+			<p>今天 15:50</p>
+			<span class="two">8k-15k</span>			
+		</li>
+		<li>		
+			<img src="https://static.lagou.com/i/image/M00/32/11/CgpFT1k-UIeAc_jgAAAJ1wOyLCk616.png" alt="">
+			<h4>北京博特互动营销咨询有限公司</h4>
+			<span class="one">电商运营[北京]</span>
+			<p>今天 15:50</p>
+			<span class="two">5k-10k</span>		
+		</li>
+		<li>		
+			<img src="https://static.lagou.com/i/image/M00/32/11/CgpFT1k-UIeAc_jgAAAJ1wOyLCk616.png" alt="">
+			<h4>北京博特互动营销咨询有限公司</h4>
+			<span class="one">电商运营[北京]</span>
+			<p>今天 15:50</p>
+			<span class="two">5k-10k</span>		
+		</li>
+		<li>		
+			<img src="https://static.lagou.com/i/image/M00/32/11/CgpFT1k-UIeAc_jgAAAJ1wOyLCk616.png" alt="">
+			<h4>北京博特互动营销咨询有限公司</h4>
+			<span class="one">电商运营[北京]</span>
+			<p>今天 15:50</p>
+			<span class="two">5k-10k</span>		
+		</li>
+		<li>		
+			<img src="2.jpg" alt="">
+			<h4>北京博特互动营销咨询有限公司</h4>
+			<span class="one">电商运营[北京]</span>
+			<p>今天 15:50</p>
+			<span class="two">5k-10k</span>		
+		</li>
+		<li>		
+			<img src="2.jpg" alt="">
+			<h4>北京博特互动营销咨询有限公司</h4>
+			<span class="one">电商运营[北京]</span>
+			<p>今天 15:50</p>
+			<span class="two">5k-10k</span>		
+		</li>
+		<li>		
+			<img src="2.jpg" alt="">
+			<h4>北京博特互动营销咨询有限公司</h4>
+			<span class="one">电商运营[北京]</span>
+			<p>今天 15:50</p>
+			<span class="two">5k-10k</span>		
+		</li>
+		<li>		
+			<img src="2.jpg" alt="">
+			<h4>北京博特互动营销咨询有限公司</h4>
+			<span class="one">电商运营[北京]</span>
+			<p>今天 15:50</p>
+			<span class="two">5k-10k</span>		
+		</li>
+		<li>		
+			<img src="2.jpg" alt="">
+			<h4>北京博特互动营销咨询有限公司</h4>
+			<span class="one">电商运营[北京]</span>
+			<p>今天 15:50</p>
+			<span class="two">5k-10k</span>		
+		</li>
+		<li>		
+			<img src="2.jpg" alt="">
+			<h4>北京博特互动营销咨询有限公司</h4>
+			<span class="one">电商运营[北京]</span>
+			<p>今天 15:50</p>
+			<span class="two">5k-10k</span>		
+		</li>
+		<li>		
+			<img src="2.jpg" alt="">
+			<h4>北京博特互动营销咨询有限公司</h4>
+			<span class="one">电商运营[北京]</span>
+			<p>今天 15:50</p>
+			<span class="two">5k-10k</span>		
+		</li>
+		<li>		
+			<img src="2.jpg" alt="">
+			<h4>北京博特互动营销咨询有限公司</h4>
+			<span class="one">电商运营[北京]</span>
+			<p>今天 15:50</p>
+			<span class="two">5k-10k</span>		
+		</li>
+		<li>		
+			<img src="2.jpg" alt="">
+			<h4>北京博特互动营销咨询有限公司</h4>
+			<span class="one">电商运营[北京]</span>
+			<p>今天 15:50</p>
+			<span class="two">5k-10k</span>		
+		</li>
+		<li class="loading">加载更多</li>
+	</ul>
+	<div class="copyright">
+		<p>©2015 lagou.com, all right reserved </p>
+		<div>
+			<span style="color: #999">移动版·</span>
+			<span>电脑版·</span>
+			<span>回顶部</span>
+		</div>
+	</div>
+	<div style="height:40px;margin-top:40px"></div>
+</section>
+<footer>
+	<div class="footerDiv">
+		<div class="zhiwei" id="zhiwei">
+			<span></span>
+			<span><a href="">职位</a></span>
+		</div>
+		<div class="sousu" id="sousu">
+			<span></span>
+			<span><a href="">搜索</a></span>
+		</div>
+		<div class="wode" id="wode">
+			<span></span>
+			<span><a href="">我的</a></span>
+		</div>
+	</div>
+</footer>	
+</body>
+</html>
