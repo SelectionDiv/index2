@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut delectus enim id quod. Alias atque error explicabo laboriosam maxime. Dolorem, eos ex ipsam modi non porro suscipit vel vitae!</p>
+</div>
+<input type="button" value="5秒后解禁" disabled>
+
+<script>
+    var inp = document.getElementsByTagName("input")[0];
+    var n = 5
+    var timer = setInterval(function(){
+        n--;
+        inp.value = n+"秒后解禁"
+        if(n==0){
+            clearInterval(timer)
+            inp.value = "确定";
+            inp.disabled = false;
+            /* inp.removeAttribute("disabled")*/
+        }
+
+
+    },1000)
+
+
+</script>
+
+</body>
+</html>

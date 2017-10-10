@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<input type="button" value="添加">
+<div></div>
+
+
+
+
+<script>
+        /*封装方法：获取元素通过标签名*/
+       function $(id){
+           return document.getElementsByTagName(id)
+       }
+
+       var inp = $("input")[0];
+       var btn = $("input")[1];
+       var div = $("div")[0];
+
+       var arr = [];
+
+
+       btn.onclick = function () {
+           add()//获取input里的值添加到数组
+           show()//遍历数组显示在div
+       }
+
+        function add() {
+            //获取input里的值添加到数组
+            var text = inp.value;
+            arr.push(text);
+        }
+
+
+        function show() {
+            //先清空
+           div.innerHTML = "";
+           //遍历，for循环数组显示在div上；
+           for(var i = 0;i<arr.length;i++){
+               //给每个添加进来的数据绑定删除事件
+               div.innerHTML += "<p>"+arr[i]+"<a href='##' onclick='del("+i+")'>删除</a></p>"
+           }
+        }
+
+        function del(a) {
+           //删除数组当前点击的
+            arr.splice(a, 1);
+            //删除后重新加载页面
+            show();
+
+        }
+
+
+
+
+
+
+</script>
+</body>
+</html>

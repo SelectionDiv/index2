@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>冒泡排序初级</title>
+</head>
+<body>
+	<script>
+
+	//需求：给数组中的元素排列顺序。从小到大，用冒泡的方法排列顺序。
+    //原理：相邻的两个元素进行比较，大的靠后，排列元素个数-1轮，每轮排列元素个数-1次
+    //技术点：排列元素个数-1轮，每轮排列元素个数-1次
+
+    //步骤：
+    //1.需要两个for循环。
+
+
+	var arr = [3,2,1]
+	var n = 0;
+	var m = 0;
+	//2.一个控制轮数，元素个数-1轮，一个控制次数，元素个数-1次。
+		for(var i =0;i<arr.length-1;i++){ 
+	    m++;
+	    	for(var j=0;j<arr.length-1;j++){
+				//3.作比较，相邻的两个元素比较，谁大谁在后面。（判断，如果前面的比后面的大，交换位置）
+			n++;
+				if(arr[j]>arr[j+1]){
+				    //第一项大于第二项，然后交换位置
+					var temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+				}
+			}
+		}
+	document.write(arr)
+    document.write("</br>")
+	document.write(m)
+    document.write("</br>")
+	document.write(n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+	
+
+	</script>
+</body>
+</html>

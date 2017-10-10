@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="top">
+    <button>全选</button>
+    <button>取消全选</button>
+    <button>反选</button>
+</div>
+<div id="button">
+    <ul style="list-style: none">
+        <li>选项: <input type="checkbox"/></li>
+        <li>选项: <input type="checkbox"/></li>
+        <li>选项: <input type="checkbox"/></li>
+        <li>选项: <input type="checkbox"/></li>
+        <li>选项: <input type="checkbox"/></li>
+        <li>选项: <input type="checkbox"/></li>
+        <li>选项: <input type="checkbox"/></li>
+        <li>选项: <input type="checkbox"/></li>
+        <li>选项: <input type="checkbox"/></li>
+        <li>选项: <input type="checkbox"/></li>
+        <li>选项: <input type="checkbox"/></li>
+        <li>选项: <input type="checkbox"/></li>
+    </ul>
+</div>
+
+
+<script>
+
+    window.onload = function(){
+        var btn =document.getElementsByTagName("button")
+        var lis =document.getElementsByTagName("li")
+        var inp =document.getElementsByTagName("input")
+
+        btn[0].onclick=function(){
+            for(var i =0;i<inp.length;i++){
+                inp[i].checked= true;     
+            }
+        }
+        btn[1].onclick =function(){
+            for(var i =0;i<inp.length;i++){
+                inp[i].checked=false;
+            }
+        }
+        btn[2].onclick =function(){
+            for(var i =0;i<inp.length;i++){
+                if(inp[i].checked==false){
+                    inp[i].checked=true
+                }else{
+                    inp[i].checked=false
+                }             
+            }
+        } 
+    }
+
+
+
+</script>
+
+</body>
+</html>

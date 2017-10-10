@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+
+
+
+
+
+
+
+    //数组去重 ，创建空数组 用indexOf 判断空数组有没有，没有push()
+
+/*
+
+    var arr = [12,2,3,4,5,12,3,1,4];
+    var a = [];
+
+    for(var i = 0;i<arr.length;i++){
+        if(a.indexOf(arr[i]) == -1){
+
+            a.push(arr[i])
+        }
+    }
+
+    console.log(a);
+
+*/
+
+
+    //数组去重第二个方法
+    // 两个for
+/*
+    var arr = [1,1,1,2,3,4,4]
+
+    for(var i =0;i<arr.length;i++){
+        //外循环是
+        for(var j=i+1 ;j<arr.length;j++){
+            if(arr[i] == arr[j]){
+                arr.splice(j,1);
+                j--;
+            }
+        }
+
+    }
+    console.log(arr);
+*/
+
+
+    /*
+    var arr111 = [1,1,1,1,2,3,4,5,6,4,3,2,1];
+    //去重方法封装
+    function unique(arr){
+        for(var i = 0;i<arr.length;i++){
+            for(var j=i+1 ;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    arr.splice(j,1);
+                    j--;
+
+                }
+            }
+        }
+        return arr;
+    }
+
+    var a = unique(arr111)
+    console.log(a);
+*/
+
+/*
+
+    for(var i = 0;i<arr.length;i++){
+        for(var j=i+1 ;j<arr.length;j++){
+            if(arr[i]==arr[j]){
+                arr.splice(j,1);
+                j--;
+
+            }
+        }
+    }
+*/
+
+/*
+
+    var arr = [1,2,2,1,1,1];
+    var a = []
+      for(var i = 0;i<arr.length;i++){
+          var flag = true;
+          // 开闭原则，相当于开关
+          for(var j =i+1;j<arr.length;j++){
+              if(arr[i] == arr[j]){
+                  flag = false;
+              }
+          }
+          if(flag == true){
+              a.push(arr[i])
+          }
+
+      }
+*/
+
+
+
+
+
+/*
+    var arr = [1,1,1,1,2,3,4,5,6,4,3,2,1];
+
+    var arr1 = [];
+    for(var i =0;i<arr.length;i++){
+        //开闭原则
+        var flag = true;
+        for(var j = i+1;j<arr.length;j++){
+            if(arr[i] == arr[j]){
+                flag = false;
+            }
+        }
+        if(flag == true){
+            arr1.push(arr[i])
+        }
+    }
+    console.log(arr1);
+
+*/
+
+</script>
+</body>
+</html>

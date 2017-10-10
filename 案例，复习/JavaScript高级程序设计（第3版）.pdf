@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<script>
+                var div = document.getElementById("id名");
+    //声明一个变量保存数据             获取  元素  通过id 名的方式；
+                var div = document.getElementsByTagName("标签名")
+                //通过标签名的方式获取元素；它返回的是一个集合，绑定事件即使有一个也要用中括号[0];
+
+                    .style
+                    //this指向调用者（）;
+                    this.className = "类名"
+
+
+    //三个事件
+/*    onclick 点击
+    onchange 内容改变时
+    onmouseover 鼠标经过
+    onmouseout 鼠标离开
+    */
+</script>
+</body>
+</html>

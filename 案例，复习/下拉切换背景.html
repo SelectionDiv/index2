@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景</title>
+	<script>
+		window.onload = function(){
+			var sel = document.getElementsByTagName("select")
+			var body =document.body
+			sel[0].onchange = function(){
+				switch(Number(this.value)){
+					case 2:
+						body.style.backgroundColor="blue";
+						break;
+					case 3:
+						body.style.backgroundColor="red";
+						break;
+					case 4:
+						body.style.backgroundColor="gray";
+						break;
+					default:
+						body.style.backgroundColor="black";	
+						break;			
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+<select>
+    <option value="1">春</option>
+    <option value="2">夏</option>
+    <option value="3">秋</option>
+    <option value="4">冬</option>
+</select>
+
+</body>
+</html>

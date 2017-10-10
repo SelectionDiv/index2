@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        //求2个数中的最大值，求3个数中的最大值
+        var arr = [1,2,3,4,5,6,7,1,2,3];
+        //思路 （冒泡排序，从小到大 最大的就是最后一个return(arr[arr.length-1] ，arr[0]）
+
+
+        //求2个数中的最大值
+//        function max(a,b) {
+        //
+        //            if(a>b){
+        //                return a;
+        //            }else{
+        //                return b;
+        //            }
+        //        }
+//        console.log(Math.max(1, 2, 3, 4, 2, 2, 3, 55, 43));
+//        console.log(Math.min(1, 2, 3, 4, 2, 2, 3, 55, 43));
+
+//        console.log(max(43, 23));
+        //求3个数中的最大值
+//        function max(a,b,c){
+//
+//
+//
+//            //思路
+//            //取前两个数中的最大值；
+//            //然后用最大值和第三个数比
+//
+//
+////            if(a>b){
+////                b = a;
+////            }
+////            if(b>c){
+////                return b;
+////            }
+////            else{
+////                return c;
+////            }
+//
+//
+//        }
+//        console.log(max(-1,2,-23));
+
+
+        //判断一个数是否是素数 (质数)；只能被1和它本身整除的数
+        //思路 从5， 5可不可以被 ，7可不可以被 65432没有任何余数为0的情况，就说明这个数是质数
+//        function isPrime(a) {
+//
+//            for(var i = 2;i<a;i++){
+//                if(a%i === 0){
+//                    return false;
+//                }
+//
+//            }
+//            return true;
+//        }
+        console.log(isPrime(2));
+        console.log(isPrime(5));
+        console.log(isPrime(9));
+        console.log(isPrime(51));
+        console.log(isPrime(55));
+
+
+</script>
+</body>
+</html>

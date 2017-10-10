@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //创建数组方式
+    var arr = new Array(10);
+    //var arr  = [];
+//    console.log(arr.length());
+//    console.log(arr.length);
+//    arr[4] = 1;
+//    console.log(arr);
+    //求数组中最小值
+//    var arr = [1,-3,4,5,6];
+//
+//    var Min = arr[0];//必须是数组中的某一项
+//    for(var i=0;i<arr.length;i++){
+//        if(Min>arr[i]){
+//            Min = arr[i]
+//        }
+//    }
+//    console.log(Min);
+
+/*
+    //1-100被7整除的数添加到数组；
+    var arr = [];
+    //重新定义一个索引值
+    var n = 0;
+    for(var i = 1;i<=100;i++){
+        if(i%7 == 0){
+            arr[n] = i;
+            n++;
+
+        }
+    }
+    console.log(arr);
+
+*/
+    //break是结束整个循环体，continue是结束单次循环
+    //break 立即跳出循环
+    //continue
+
+
+
+
+
+//    var arr = [];
+//
+//    for(var i = 1;i<=100;i++){
+//        if(i%2 == 0){
+//            continue
+//        }
+//        arr[arr.length] = i;
+//    }
+//    console.log(arr);
+
+//    var arr = [1,-3,4,5,6];
+    //
+        //冒泡排序
+//        for(var i = 0;i<arr.length-1;i++){
+//            //外循环控制轮数
+//            for(var j =0;j<arr.length-1-i;j++){
+//                //内循环控制次数
+//                //作比较（谁大谁在后面）
+//                if(arr[j]>arr[j+1]){
+//                    //交换位置
+//                    var temp  = arr[j+1];
+//                    arr[j+1] = arr[j];
+//                    arr[j] = temp;
+//                }
+//
+//            }
+//
+//        }
+
+        var a = [1,-3,4,5,6,2];
+        var a1 = [1,-3,4,5,6,2];
+        var a2 = [1,-3,4,5,6,2];
+        var a3 = [1,-3,4,5,6,2];
+        var a4 = [1,-3,4,5,6,2];
+        function  p(arr){
+
+            for(var i = 0;i<arr.length-1;i++){
+                //外循环控制轮数
+                for(var j =0;j<arr.length-1-i;j++){
+                    //内循环控制次数
+                    //作比较（谁大谁在后面）
+                    if(arr[j]>arr[j+1]){
+                        //交换位置
+                        var temp  = arr[j+1];
+                        arr[j+1] = arr[j];
+                        arr[j] = temp;
+                    }
+
+                }
+
+            }
+            return arr;
+
+
+        }
+
+    console.log(p(a));
+
+
+
+
+</script>
+</body>
+</html>
